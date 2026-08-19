@@ -1,7 +1,7 @@
 import React from "react";
 import "./Login.css";
 
-function Login({onBackToHome}) {
+function Login({ onBackToHome, onRegister }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -13,7 +13,7 @@ function Login({onBackToHome}) {
   return (
     <div className="login-page">
 
-      {/* LEFT SIDE */}
+      {/* ================= LEFT SIDE ================= */}
       <div className="login-left">
 
         {/* CRICFUSION LOGO */}
@@ -41,9 +41,10 @@ function Login({onBackToHome}) {
           </h1>
 
           <p className="hero-text">
-  Book your favourite IPL & WPL matches, choose your perfect seat,
-  reserve parking and get your digital ticket — all in one seamless platform.
-</p>
+            Book your favourite IPL & WPL matches, choose your perfect seat,
+            reserve parking and get your digital ticket — all in one seamless
+            platform.
+          </p>
 
           <div className="features">
 
@@ -79,7 +80,7 @@ function Login({onBackToHome}) {
       </div>
 
 
-      {/* RIGHT SIDE */}
+      {/* ================= RIGHT SIDE ================= */}
       <div className="login-right">
 
         <div className="login-card">
@@ -216,7 +217,6 @@ function Login({onBackToHome}) {
               Google
             </button>
 
-
             <button
               type="button"
               className="social-button"
@@ -236,7 +236,16 @@ function Login({onBackToHome}) {
 
             Don't have an account?
 
-            <a href="#create-account">
+            <a
+              href="#create-account"
+              onClick={(e) => {
+                e.preventDefault();
+
+                if (onRegister) {
+                  onRegister();
+                }
+              }}
+            >
               {" "}Create Account
             </a>
 

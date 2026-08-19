@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 
-function Home({ onLogin }) {
+function Home({ onLogin, onRegister }) {
   return (
     <div className="home-page">
 
@@ -27,6 +27,7 @@ function Home({ onLogin }) {
         </div>
 
         <div className="auth-buttons">
+
           <button
             className="login-btn"
             onClick={onLogin}
@@ -34,9 +35,13 @@ function Home({ onLogin }) {
             Login
           </button>
 
-          <button className="register-btn">
+          <button
+            className="register-btn"
+            onClick={onRegister}
+          >
             Register
           </button>
+
         </div>
 
       </nav>
