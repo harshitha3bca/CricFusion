@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 
-function Home({ onLogin, onRegister }) {
+function Home({ onLogin, onRegister,onMatches }) {
   return (
     <div className="home-page">
 
@@ -18,13 +18,23 @@ function Home({ onLogin, onRegister }) {
         </div>
 
         <div className="nav-links">
-          <a href="#" className="active">Home</a>
-          <a href="#">Matches</a>
-          <a href="#">Teams</a>
-          <a href="#">Players</a>
-          <a href="#">Stadiums</a>
-          <a href="#">Offers</a>
-        </div>
+  <a href="#" className="active">Home</a>
+
+  <a
+    href="#"
+    onClick={(e) => {
+      e.preventDefault();
+      onMatches();
+    }}
+  >
+    Matches
+  </a>
+
+  <a href="#">Teams</a>
+  <a href="#">Players</a>
+  <a href="#">Stadiums</a>
+  <a href="#">Offers</a>
+</div>
 
         <div className="auth-buttons">
 
