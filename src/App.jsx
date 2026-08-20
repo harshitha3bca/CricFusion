@@ -15,6 +15,7 @@ function App() {
     return (
       <Login
         onBackToHome={() => setPage("home")}
+        onRegister={() => setPage("register")}
       />
     );
   }
