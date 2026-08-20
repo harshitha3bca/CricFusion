@@ -12,7 +12,13 @@ function Login({ onBackToHome, onRegister }) {
 
   return (
     <div className="login-page">
-
+<button
+  type="button"
+  className="back-home-btn"
+  onClick={onBackToHome}
+>
+  ← Back to Home
+</button>
       {/* ================= LEFT SIDE ================= */}
       <div className="login-left">
 

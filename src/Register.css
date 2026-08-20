@@ -942,3 +942,30 @@
     flex-direction: column;
   }
 }
+.register-back-home-btn {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+
+  padding: 10px 16px;
+
+  border: 1px solid #6845c8;
+  border-radius: 7px;
+
+  background: rgba(10, 13, 31, 0.85);
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+  z-index: 100;
+
+  transition: 0.2s ease;
+}
+
+.register-back-home-btn:hover {
+  background: #6845c8;
+  transform: translateY(-1px);
+}

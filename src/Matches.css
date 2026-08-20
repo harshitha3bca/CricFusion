@@ -574,3 +574,252 @@
     padding: 10px 18px 40px;
   }
 }
+/* =====================================================
+   IPL / WPL SWITCH
+===================================================== */
+
+.league-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 25px auto 20px;
+}
+
+.league-btn {
+  min-width: 120px;
+  height: 44px;
+
+  padding: 0 25px;
+
+  border-radius: 8px;
+
+  border: 1px solid #6845c8;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  color: #c8ccda;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.league-btn:hover {
+  background: rgba(105, 53, 210, 0.15);
+  color: white;
+}
+
+.league-btn.active {
+  color: white;
+
+  border-color: transparent;
+
+  background:
+    linear-gradient(
+      90deg,
+      #5a25d9,
+      #9134ef
+    );
+
+  box-shadow:
+    0 0 20px rgba(105, 45, 230, 0.35);
+}
+
+
+/* =====================================================
+   LEAGUE TITLE
+===================================================== */
+
+.league-title {
+  text-align: center;
+
+  margin: 10px 0 25px;
+
+  color: #a783ff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   REAL TEAMS
+===================================================== */
+
+.teams-section {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 45px auto 0;
+
+  padding: 0 25px 30px;
+}
+
+.teams-section h2 {
+  margin: 0 0 18px;
+
+  color: white;
+
+  text-align: center;
+
+  font-size: 22px;
+}
+
+.teams-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+.team-name-card {
+  min-height: 65px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px;
+
+  text-align: center;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(17, 32, 53, 0.98),
+      rgba(7, 18, 33, 0.98)
+    );
+
+  border: 1px solid rgba(116, 139, 175, 0.18);
+
+  color: #d8dbea;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.team-name-card:hover {
+  border-color: rgba(132, 76, 255, 0.55);
+
+  transform: translateY(-2px);
+
+  color: white;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 750px) {
+
+  .teams-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .league-btn {
+    min-width: 105px;
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  .teams-list {
+    grid-template-columns: 1fr;
+  }
+
+}
+/* =========================
+   IPL / WPL BUTTONS
+========================= */
+
+.league-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 14px;
+
+  margin: 10px auto 35px;
+}
+
+.league-btn {
+  min-width: 130px;
+  height: 45px;
+
+  padding: 0 25px;
+
+  border-radius: 8px;
+
+  border: 1px solid #6845c8;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  color: #bfc5d3;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.league-btn:hover {
+  color: white;
+
+  border-color: #9b5cff;
+
+  background: rgba(111, 50, 220, 0.15);
+}
+
+.league-btn.active-league {
+  color: white;
+
+  border-color: transparent;
+
+  background: linear-gradient(
+    90deg,
+    #5a25d9,
+    #9134ef
+  );
+
+  box-shadow:
+    0 0 20px rgba(105, 45, 230, 0.35);
+}
+.team-logo {
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.team-logo img {
+  width: 65px;
+  height: 65px;
+
+  object-fit: contain;
+  display: block;
+}

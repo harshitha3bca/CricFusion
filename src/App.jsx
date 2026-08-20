@@ -6,31 +6,25 @@ import Register from "./Register.jsx";
 import Matches from "./Matches.jsx";
 
 function App() {
-  const [page, setPage] = useState("home");
 
-  /* ================= LOGIN PAGE ================= */
+  const [page, setPage] = useState("home");
 
   if (page === "login") {
     return (
       <Login
         onBackToHome={() => setPage("home")}
-        onRegister={() => setPage("register")}
       />
     );
   }
-
-  /* ================= REGISTER PAGE ================= */
 
   if (page === "register") {
     return (
       <Register
+        onBackToLogin={() => setPage("login")}
         onBackToHome={() => setPage("home")}
-        onLogin={() => setPage("login")}
       />
     );
   }
-
-  /* ================= MATCHES PAGE ================= */
 
   if (page === "matches") {
     return (
@@ -39,8 +33,6 @@ function App() {
       />
     );
   }
-
-  /* ================= HOME PAGE ================= */
 
   return (
     <Home

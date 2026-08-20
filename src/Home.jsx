@@ -21,14 +21,14 @@ function Home({ onLogin, onRegister,onMatches }) {
   <a href="#" className="active">Home</a>
 
   <a
-    href="#"
-    onClick={(e) => {
-      e.preventDefault();
-      onMatches();
-    }}
-  >
-    Matches
-  </a>
+  href="#matches"
+  onClick={(e) => {
+    e.preventDefault();
+    onMatches();
+  }}
+>
+  Matches
+</a>
 
   <a href="#">Teams</a>
   <a href="#">Players</a>
@@ -85,10 +85,12 @@ function Home({ onLogin, onRegister,onMatches }) {
 
             <div className="hero-buttons">
 
-              <button className="explore-btn">
-                Explore Matches
-              </button>
-
+              <button
+  className="explore-btn"
+  onClick={onMatches}
+>
+  Explore Matches
+</button>
               <button className="how-btn">
                 How It Works
               </button>

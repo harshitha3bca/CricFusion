@@ -15,6 +15,13 @@ function Register({ onBackToLogin, onBackToHome }) {
 
   return (
     <div className="register-page">
+      <button
+  type="button"
+  className="register-back-home-btn"
+  onClick={onBackToHome}
+>
+  ← Back to Home
+</button>
 
       {/* ================= LEFT SIDE ================= */}
 
