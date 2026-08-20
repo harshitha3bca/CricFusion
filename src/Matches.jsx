@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Matches.css";
+import StadiumDetails from "./StadiumDetails.jsx";
 
 // ================= IPL TEAM LOGOS =================
 import miLogo from "./assets/teams/mi.png";
@@ -14,7 +15,6 @@ import gtLogo from "./assets/teams/gt.png";
 import lsgLogo from "./assets/teams/lsg.png";
 
 // ================= WPL TEAM LOGOS =================
-// Change these filenames if your WPL logo files have different names.
 import dcWplLogo from "./assets/teams/dc-wpl.png";
 import miWplLogo from "./assets/teams/mi-wpl.png";
 import rcbWplLogo from "./assets/teams/rcb-wpl.png";
@@ -26,10 +26,159 @@ function Matches({ onBackToHome }) {
 
   const [activeLeague, setActiveLeague] = useState("IPL");
 
+  const [selectedStadium, setSelectedStadium] = useState(null);
 
-  // ================= IPL MATCHES =================
+
+  // =====================================================
+  // STADIUM DETAILS
+  // =====================================================
+
+  const stadiumDetails = {
+
+    "Wankhede Stadium, Mumbai": {
+      name: "Wankhede Stadium",
+      image: "/src/assets/stadiums/wankhede.jpg",
+      address:
+        "D Road, Churchgate, Mumbai, Maharashtra, India",
+
+      pitch: "Batting-friendly pitch",
+
+      pitchDescription:
+        "Wankhede is generally considered a good venue for stroke-making. The surface can support batting, while fast bowlers may get some assistance early in the innings.",
+
+      facilities: [
+        { icon: "♿", name: "Wheelchair Access" },
+        { icon: "🍴", name: "Food & Beverages" },
+        { icon: "👩", name: "Mother's Lounge" },
+        { icon: "🛍️", name: "Team Store" },
+        { icon: "🚗", name: "Parking" },
+      ],
+    },
+
+
+    "M. Chinnaswamy Stadium, Bengaluru": {
+      name: "M. Chinnaswamy Stadium",
+
+      image: "/src/assets/stadiums/chinnaswamy.jpg",
+
+      address:
+        "MG Road, Bengaluru, Karnataka, India",
+
+      pitch: "Batting-friendly pitch",
+
+      pitchDescription:
+        "The relatively short boundaries and conditions at Bengaluru can make this a high-scoring venue. Batters generally enjoy the surface, while bowlers need to use variations effectively.",
+
+      facilities: [
+        { icon: "♿", name: "Wheelchair Access" },
+        { icon: "🍴", name: "Food & Beverages" },
+        { icon: "👩", name: "Mother's Lounge" },
+        { icon: "🛍️", name: "Team Store" },
+        { icon: "🚗", name: "Parking" },
+      ],
+    },
+
+
+    "Rajiv Gandhi International Stadium, Hyderabad": {
+      name: "Rajiv Gandhi International Stadium",
+
+      image: "/src/assets/stadiums/rajiv-gandhi.jpg",
+
+      address:
+        "Uppal, Hyderabad, Telangana, India",
+
+      pitch: "Balanced pitch",
+
+      pitchDescription:
+        "The pitch can provide a good contest between bat and ball. Batting conditions can improve as the innings progresses.",
+
+      facilities: [
+        { icon: "♿", name: "Wheelchair Access" },
+        { icon: "🍴", name: "Food & Beverages" },
+        { icon: "👩", name: "Mother's Lounge" },
+        { icon: "🛍️", name: "Team Store" },
+        { icon: "🚗", name: "Parking" },
+      ],
+    },
+
+
+    "Arun Jaitley Stadium, Delhi": {
+      name: "Arun Jaitley Stadium",
+
+      image: "/src/assets/stadiums/arun-jaitley.jpg",
+
+      address:
+        "Bahadur Shah Zafar Marg, New Delhi, Delhi, India",
+
+      pitch: "Spin-friendly pitch",
+
+      pitchDescription:
+        "The Delhi surface can assist spin bowling, particularly as the match progresses. Batters need to adapt to the conditions and pace of the pitch.",
+
+      facilities: [
+        { icon: "♿", name: "Wheelchair Access" },
+        { icon: "🍴", name: "Food & Beverages" },
+        { icon: "👩", name: "Mother's Lounge" },
+        { icon: "🛍️", name: "Team Store" },
+        { icon: "🚗", name: "Parking" },
+      ],
+    },
+
+
+    "Narendra Modi Stadium, Ahmedabad": {
+      name: "Narendra Modi Stadium",
+
+      image: "/src/assets/stadiums/narendra-modi.jpg",
+
+      address:
+        "Motera, Ahmedabad, Gujarat, India",
+
+      pitch: "Balanced pitch",
+
+      pitchDescription:
+        "The large playing area can produce an interesting contest between batters and bowlers. Conditions can vary depending on the surface prepared for the match.",
+
+      facilities: [
+        { icon: "♿", name: "Wheelchair Access" },
+        { icon: "🍴", name: "Food & Beverages" },
+        { icon: "👩", name: "Mother's Lounge" },
+        { icon: "🛍️", name: "Team Store" },
+        { icon: "🚗", name: "Parking" },
+      ],
+    },
+
+
+    "BRSABVE Cricket Stadium, Lucknow": {
+      name: "BRSABVE Cricket Stadium",
+
+      image: "/src/assets/stadiums/ekana.jpg",
+
+      address:
+        "Ekana Sports City, Lucknow, Uttar Pradesh, India",
+
+      pitch: "Bowling-friendly pitch",
+
+      pitchDescription:
+        "The Lucknow surface can offer assistance to bowlers, especially under favorable conditions. Batters may need to spend time at the crease before playing attacking shots.",
+
+      facilities: [
+        { icon: "♿", name: "Wheelchair Access" },
+        { icon: "🍴", name: "Food & Beverages" },
+        { icon: "👩", name: "Mother's Lounge" },
+        { icon: "🛍️", name: "Team Store" },
+        { icon: "🚗", name: "Parking" },
+      ],
+    },
+
+  };
+
+
+  // =====================================================
+  // IPL MATCHES
+  // =====================================================
 
   const iplMatches = [
+
     {
       date: "22 MARCH 2026",
       team1: "Mumbai Indians",
@@ -79,12 +228,16 @@ function Matches({ onBackToHome }) {
       stadium: "Narendra Modi Stadium, Ahmedabad",
       time: "7:30 PM",
     },
+
   ];
 
 
-  // ================= WPL MATCHES =================
+  // =====================================================
+  // WPL MATCHES
+  // =====================================================
 
   const wplMatches = [
+
     {
       date: "10 JANUARY 2026",
       team1: "Delhi Capitals",
@@ -134,8 +287,13 @@ function Matches({ onBackToHome }) {
       stadium: "M. Chinnaswamy Stadium, Bengaluru",
       time: "7:30 PM",
     },
+
   ];
 
+
+  // =====================================================
+  // CURRENT MATCH LIST
+  // =====================================================
 
   const matches =
     activeLeague === "IPL"
@@ -143,8 +301,30 @@ function Matches({ onBackToHome }) {
       : wplMatches;
 
 
+  // =====================================================
+  // STADIUM DETAILS PAGE
+  // =====================================================
+
+  if (selectedStadium) {
+
+    return (
+      <StadiumDetails
+        stadium={selectedStadium}
+        onBack={() => setSelectedStadium(null)}
+      />
+    );
+
+  }
+
+
+  // =====================================================
+  // MAIN MATCHES PAGE
+  // =====================================================
+
   return (
+
     <div className="matches-page">
+
 
       {/* ================= NAVBAR ================= */}
 
@@ -167,15 +347,18 @@ function Matches({ onBackToHome }) {
           <a
             href="#home"
             onClick={(e) => {
+
               e.preventDefault();
 
               if (onBackToHome) {
                 onBackToHome();
               }
+
             }}
           >
             Home
           </a>
+
 
           <a
             href="#matches"
@@ -184,17 +367,21 @@ function Matches({ onBackToHome }) {
             Matches
           </a>
 
+
           <a href="#teams">
             Teams
           </a>
+
 
           <a href="#players">
             Players
           </a>
 
+
           <a href="#stadiums">
             Stadiums
           </a>
+
 
           <a href="#offers">
             Offers
@@ -213,9 +400,11 @@ function Matches({ onBackToHome }) {
           IPL & WPL
         </p>
 
+
         <h1>
           Upcoming <span>Matches</span>
         </h1>
+
 
         <p>
           Choose your match and book your perfect seat.
@@ -234,6 +423,7 @@ function Matches({ onBackToHome }) {
               ? "league-btn active"
               : "league-btn"
           }
+
           onClick={() => setActiveLeague("IPL")}
         >
           🏏 IPL
@@ -246,6 +436,7 @@ function Matches({ onBackToHome }) {
               ? "league-btn active"
               : "league-btn"
           }
+
           onClick={() => setActiveLeague("WPL")}
         >
           🏏 WPL
@@ -254,7 +445,7 @@ function Matches({ onBackToHome }) {
       </div>
 
 
-      {/* ================= CURRENT LEAGUE TITLE ================= */}
+      {/* ================= CURRENT LEAGUE ================= */}
 
       <div className="current-league">
 
@@ -262,10 +453,13 @@ function Matches({ onBackToHome }) {
           {activeLeague} Matches
         </h2>
 
+
         <p>
+
           {activeLeague === "IPL"
             ? "Indian Premier League"
             : "Women's Premier League"}
+
         </p>
 
       </div>
@@ -281,6 +475,7 @@ function Matches({ onBackToHome }) {
             className="match-card"
             key={index}
           >
+
 
             {/* STATUS */}
 
@@ -314,6 +509,7 @@ function Matches({ onBackToHome }) {
 
                 </div>
 
+
                 <h3>
                   {match.team1}
                 </h3>
@@ -341,6 +537,7 @@ function Matches({ onBackToHome }) {
 
                 </div>
 
+
                 <h3>
                   {match.team2}
                 </h3>
@@ -358,6 +555,7 @@ function Matches({ onBackToHome }) {
                 🏟 {match.stadium}
               </span>
 
+
               <span>
                 🕗 {match.time}
               </span>
@@ -365,21 +563,33 @@ function Matches({ onBackToHome }) {
             </div>
 
 
-            {/* BOOK BUTTON */}
+            {/* BOOK TICKETS */}
 
             <button
               className="book-btn"
+
               onClick={() => {
-                console.log(
-                  "Booking:",
-                  match.team1,
-                  "vs",
-                  match.team2
-                );
+
+                const details =
+                  stadiumDetails[match.stadium];
+
+                if (details) {
+
+                  setSelectedStadium(details);
+
+                } else {
+
+                  alert(
+                    "Stadium details are not available yet."
+                  );
+
+                }
+
               }}
             >
               Book Tickets →
             </button>
+
 
           </div>
 
@@ -400,8 +610,11 @@ function Matches({ onBackToHome }) {
 
       </div>
 
+
     </div>
+
   );
+
 }
 
 export default Matches;

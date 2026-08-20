@@ -4,61 +4,51 @@ import Home from "./Home.jsx";
 import Login from "./Login.jsx";
 import Register from "./Register.jsx";
 import Matches from "./Matches.jsx";
-import HowItWorks from "./HowItWorks.jsx";
+import StadiumDetails from "./StadiumDetails.jsx";
 
 function App() {
-  const [page, setPage] = useState("home");
 
-  // ================= LOGIN =================
+  const [page, setPage] = useState("home");
 
   if (page === "login") {
     return (
       <Login
         onBackToHome={() => setPage("home")}
-        onRegister={() => setPage("register")}
       />
     );
   }
-
-  // ================= REGISTER =================
 
   if (page === "register") {
     return (
       <Register
-        onBackToLogin={() => setPage("login")}
         onBackToHome={() => setPage("home")}
       />
     );
   }
-
-  // ================= MATCHES =================
 
   if (page === "matches") {
     return (
       <Matches
         onBackToHome={() => setPage("home")}
+        onStadiumDetails={() => setPage("stadium")}
       />
     );
   }
 
-  // ================= HOW IT WORKS =================
-
-  if (page === "how") {
+  if (page === "stadium") {
     return (
-      <HowItWorks
-        onBackToHome={() => setPage("home")}
+      <StadiumDetails
+        onBackToMatches={() => setPage("matches")}
+        onSelectSeats={() => setPage("seats")}
       />
     );
   }
-
-  // ================= HOME =================
 
   return (
     <Home
       onLogin={() => setPage("login")}
       onRegister={() => setPage("register")}
       onMatches={() => setPage("matches")}
-      onHowItWorks={() => setPage("how")}
     />
   );
 }
