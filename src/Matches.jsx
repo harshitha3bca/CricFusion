@@ -35,26 +35,47 @@ function Matches({ onBackToHome }) {
 
   const stadiumDetails = {
 
+    // ===================================================
+    // WANKHEDE
+    // ===================================================
+
     "Wankhede Stadium, Mumbai": {
       name: "Wankhede Stadium",
-      image: "/src/assets/stadiums/wankhede.jpg",
-      address:
-        "D Road, Churchgate, Mumbai, Maharashtra, India",
 
-      pitch: "Batting-friendly pitch",
+      image: "/src/assets/stadiums/wankhede.jpg",
+
+      address:
+        "D Road, Churchgate, Mumbai, Maharashtra 400020, India",
+
+      parking:
+        "Match-day parking arrangements may vary according to event instructions.",
+
+      pitch:
+        "Batting-friendly",
 
       pitchDescription:
-        "Wankhede is generally considered a good venue for stroke-making. The surface can support batting, while fast bowlers may get some assistance early in the innings.",
+        "Generally known for good batting conditions, with good pace and bounce. Fast bowlers may get some early assistance.",
 
       facilities: [
-        { icon: "♿", name: "Wheelchair Access" },
-        { icon: "🍴", name: "Food & Beverages" },
-        { icon: "👩", name: "Mother's Lounge" },
-        { icon: "🛍️", name: "Team Store" },
-        { icon: "🚗", name: "Parking" },
-      ],
+        {
+          icon: "♿",
+          name: "Wheelchair Access"
+        },
+        {
+          icon: "🍴",
+          name: "Food & Beverages"
+        },
+        {
+          icon: "🛍️",
+          name: "Team Store"
+        }
+      ]
     },
 
+
+    // ===================================================
+    // CHINNASWAMY
+    // ===================================================
 
     "M. Chinnaswamy Stadium, Bengaluru": {
       name: "M. Chinnaswamy Stadium",
@@ -62,22 +83,41 @@ function Matches({ onBackToHome }) {
       image: "/src/assets/stadiums/chinnaswamy.jpg",
 
       address:
-        "MG Road, Bengaluru, Karnataka, India",
+        "Cubbon Road, Bengaluru, Karnataka 560001, India",
 
-      pitch: "Batting-friendly pitch",
+      parking:
+        "Parking arrangements may vary depending on the match and event.",
+
+      pitch:
+        "Batting-friendly",
 
       pitchDescription:
-        "The relatively short boundaries and conditions at Bengaluru can make this a high-scoring venue. Batters generally enjoy the surface, while bowlers need to use variations effectively.",
+        "Known for high-scoring matches and generally favorable conditions for stroke-making. The short boundaries can make it a challenging venue for bowlers.",
 
       facilities: [
-        { icon: "♿", name: "Wheelchair Access" },
-        { icon: "🍴", name: "Food & Beverages" },
-        { icon: "👩", name: "Mother's Lounge" },
-        { icon: "🛍️", name: "Team Store" },
-        { icon: "🚗", name: "Parking" },
-      ],
+        {
+          icon: "♿",
+          name: "Wheelchair Access"
+        },
+        {
+          icon: "🍴",
+          name: "Food & Beverages"
+        },
+        {
+          icon: "🏏",
+          name: "Indoor Training Facility"
+        },
+        {
+          icon: "🏋️",
+          name: "Health Club & Gym"
+        }
+      ]
     },
 
+
+    // ===================================================
+    // RAJIV GANDHI
+    // ===================================================
 
     "Rajiv Gandhi International Stadium, Hyderabad": {
       name: "Rajiv Gandhi International Stadium",
@@ -87,20 +127,31 @@ function Matches({ onBackToHome }) {
       address:
         "Uppal, Hyderabad, Telangana, India",
 
-      pitch: "Balanced pitch",
+      parking:
+        "Parking arrangements depend on the individual match and event.",
+
+      pitch:
+        "Balanced",
 
       pitchDescription:
-        "The pitch can provide a good contest between bat and ball. Batting conditions can improve as the innings progresses.",
+        "Generally provides a reasonable contest between bat and ball, with conditions changing during the match.",
 
       facilities: [
-        { icon: "♿", name: "Wheelchair Access" },
-        { icon: "🍴", name: "Food & Beverages" },
-        { icon: "👩", name: "Mother's Lounge" },
-        { icon: "🛍️", name: "Team Store" },
-        { icon: "🚗", name: "Parking" },
-      ],
+        {
+          icon: "♿",
+          name: "Wheelchair Access"
+        },
+        {
+          icon: "🍴",
+          name: "Food & Beverages"
+        }
+      ]
     },
 
+
+    // ===================================================
+    // ARUN JAITLEY
+    // ===================================================
 
     "Arun Jaitley Stadium, Delhi": {
       name: "Arun Jaitley Stadium",
@@ -110,20 +161,31 @@ function Matches({ onBackToHome }) {
       address:
         "Bahadur Shah Zafar Marg, New Delhi, Delhi, India",
 
-      pitch: "Spin-friendly pitch",
+      parking:
+        "Parking arrangements depend on match-day and event instructions.",
+
+      pitch:
+        "Spin-friendly",
 
       pitchDescription:
-        "The Delhi surface can assist spin bowling, particularly as the match progresses. Batters need to adapt to the conditions and pace of the pitch.",
+        "The surface can assist spin bowling, particularly as the match progresses. Batters need to adapt to the slower conditions and pace of the pitch.",
 
       facilities: [
-        { icon: "♿", name: "Wheelchair Access" },
-        { icon: "🍴", name: "Food & Beverages" },
-        { icon: "👩", name: "Mother's Lounge" },
-        { icon: "🛍️", name: "Team Store" },
-        { icon: "🚗", name: "Parking" },
-      ],
+        {
+          icon: "♿",
+          name: "Wheelchair Access"
+        },
+        {
+          icon: "🍴",
+          name: "Food & Catering"
+        }
+      ]
     },
 
+
+    // ===================================================
+    // NARENDRA MODI
+    // ===================================================
 
     "Narendra Modi Stadium, Ahmedabad": {
       name: "Narendra Modi Stadium",
@@ -133,20 +195,35 @@ function Matches({ onBackToHome }) {
       address:
         "Motera, Ahmedabad, Gujarat, India",
 
-      pitch: "Balanced pitch",
+      parking:
+        "Match-day parking arrangements depend on the event traffic plan.",
+
+      pitch:
+        "Balanced",
 
       pitchDescription:
-        "The large playing area can produce an interesting contest between batters and bowlers. Conditions can vary depending on the surface prepared for the match.",
+        "Pitch conditions can vary depending on the surface prepared for the match. The large ground can provide an interesting contest between batters and bowlers.",
 
       facilities: [
-        { icon: "♿", name: "Wheelchair Access" },
-        { icon: "🍴", name: "Food & Beverages" },
-        { icon: "👩", name: "Mother's Lounge" },
-        { icon: "🛍️", name: "Team Store" },
-        { icon: "🚗", name: "Parking" },
-      ],
+        {
+          icon: "♿",
+          name: "Wheelchair Access"
+        },
+        {
+          icon: "🍴",
+          name: "Food Courts"
+        },
+        {
+          icon: "🏢",
+          name: "Corporate Boxes"
+        }
+      ]
     },
 
+
+    // ===================================================
+    // EKANA / BRSABVE
+    // ===================================================
 
     "BRSABVE Cricket Stadium, Lucknow": {
       name: "BRSABVE Cricket Stadium",
@@ -156,19 +233,26 @@ function Matches({ onBackToHome }) {
       address:
         "Ekana Sports City, Lucknow, Uttar Pradesh, India",
 
-      pitch: "Bowling-friendly pitch",
+      parking:
+        "Parking arrangements depend on the individual match and event.",
+
+      pitch:
+        "Bowling-friendly",
 
       pitchDescription:
-        "The Lucknow surface can offer assistance to bowlers, especially under favorable conditions. Batters may need to spend time at the crease before playing attacking shots.",
+        "The surface can provide assistance to bowlers and may become slower as the match progresses. Batters may need to spend time at the crease before attacking.",
 
       facilities: [
-        { icon: "♿", name: "Wheelchair Access" },
-        { icon: "🍴", name: "Food & Beverages" },
-        { icon: "👩", name: "Mother's Lounge" },
-        { icon: "🛍️", name: "Team Store" },
-        { icon: "🚗", name: "Parking" },
-      ],
-    },
+        {
+          icon: "♿",
+          name: "Wheelchair Access"
+        },
+        {
+          icon: "🍴",
+          name: "Food & Beverages"
+        }
+      ]
+    }
 
   };
 
@@ -181,53 +265,77 @@ function Matches({ onBackToHome }) {
 
     {
       date: "22 MARCH 2026",
+
       team1: "Mumbai Indians",
       team1Logo: miLogo,
+
       team2: "Chennai Super Kings",
       team2Logo: cskLogo,
+
       stadium: "Wankhede Stadium, Mumbai",
-      time: "7:30 PM",
+
+      time: "7:30 PM"
     },
+
 
     {
       date: "25 MARCH 2026",
+
       team1: "Royal Challengers Bengaluru",
       team1Logo: rcbLogo,
+
       team2: "Kolkata Knight Riders",
       team2Logo: kkrLogo,
+
       stadium: "M. Chinnaswamy Stadium, Bengaluru",
-      time: "7:30 PM",
+
+      time: "7:30 PM"
     },
+
 
     {
       date: "28 MARCH 2026",
+
       team1: "Rajasthan Royals",
       team1Logo: rrLogo,
+
       team2: "Sunrisers Hyderabad",
       team2Logo: srhLogo,
+
       stadium: "Rajiv Gandhi International Stadium, Hyderabad",
-      time: "7:30 PM",
+
+      time: "7:30 PM"
     },
+
 
     {
       date: "30 MARCH 2026",
+
       team1: "Delhi Capitals",
       team1Logo: dcLogo,
+
       team2: "Punjab Kings",
       team2Logo: pbksLogo,
+
       stadium: "Arun Jaitley Stadium, Delhi",
-      time: "7:30 PM",
+
+      time: "7:30 PM"
     },
+
 
     {
       date: "2 APRIL 2026",
+
       team1: "Gujarat Titans",
       team1Logo: gtLogo,
+
       team2: "Lucknow Super Giants",
       team2Logo: lsgLogo,
+
       stadium: "Narendra Modi Stadium, Ahmedabad",
-      time: "7:30 PM",
-    },
+
+      time: "7:30 PM"
+    }
 
   ];
 
@@ -238,55 +346,84 @@ function Matches({ onBackToHome }) {
 
   const wplMatches = [
 
+    // ===================================================
+    // DC VS MI
+    // NOW ARUN JAITLEY STADIUM
+    // ===================================================
+
     {
       date: "10 JANUARY 2026",
+
       team1: "Delhi Capitals",
       team1Logo: dcWplLogo,
+
       team2: "Mumbai Indians",
       team2Logo: miWplLogo,
-      stadium: "M. Chinnaswamy Stadium, Bengaluru",
-      time: "7:30 PM",
+
+      stadium: "Arun Jaitley Stadium, Delhi",
+
+      time: "7:30 PM"
     },
+
 
     {
       date: "12 JANUARY 2026",
+
       team1: "Royal Challengers Bengaluru",
       team1Logo: rcbWplLogo,
+
       team2: "UP Warriorz",
       team2Logo: upwLogo,
+
       stadium: "M. Chinnaswamy Stadium, Bengaluru",
-      time: "7:30 PM",
+
+      time: "7:30 PM"
     },
+
 
     {
       date: "15 JANUARY 2026",
+
       team1: "Gujarat Giants",
       team1Logo: ggWplLogo,
+
       team2: "Mumbai Indians",
       team2Logo: miWplLogo,
+
       stadium: "Narendra Modi Stadium, Ahmedabad",
-      time: "7:30 PM",
+
+      time: "7:30 PM"
     },
+
 
     {
       date: "18 JANUARY 2026",
+
       team1: "UP Warriorz",
       team1Logo: upwLogo,
+
       team2: "Delhi Capitals",
       team2Logo: dcWplLogo,
+
       stadium: "BRSABVE Cricket Stadium, Lucknow",
-      time: "7:30 PM",
+
+      time: "7:30 PM"
     },
+
 
     {
       date: "20 JANUARY 2026",
+
       team1: "Royal Challengers Bengaluru",
       team1Logo: rcbWplLogo,
+
       team2: "Gujarat Giants",
       team2Logo: ggWplLogo,
+
       stadium: "M. Chinnaswamy Stadium, Bengaluru",
-      time: "7:30 PM",
-    },
+
+      time: "7:30 PM"
+    }
 
   ];
 
@@ -318,7 +455,7 @@ function Matches({ onBackToHome }) {
 
 
   // =====================================================
-  // MAIN MATCHES PAGE
+  // MAIN PAGE
   // =====================================================
 
   return (
@@ -337,7 +474,9 @@ function Matches({ onBackToHome }) {
             alt="CricFusion"
           />
 
-          <span>CricFusion</span>
+          <span>
+            CricFusion
+          </span>
 
         </div>
 
@@ -424,7 +563,9 @@ function Matches({ onBackToHome }) {
               : "league-btn"
           }
 
-          onClick={() => setActiveLeague("IPL")}
+          onClick={() =>
+            setActiveLeague("IPL")
+          }
         >
           🏏 IPL
         </button>
@@ -437,7 +578,9 @@ function Matches({ onBackToHome }) {
               : "league-btn"
           }
 
-          onClick={() => setActiveLeague("WPL")}
+          onClick={() =>
+            setActiveLeague("WPL")
+          }
         >
           🏏 WPL
         </button>
@@ -580,7 +723,7 @@ function Matches({ onBackToHome }) {
                 } else {
 
                   alert(
-                    "Stadium details are not available yet."
+                    `Stadium details are not available for ${match.stadium}.`
                   );
 
                 }
@@ -616,5 +759,6 @@ function Matches({ onBackToHome }) {
   );
 
 }
+
 
 export default Matches;
