@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
 
-function Home({ onLogin, onRegister,onMatches }) {
+function Home({ onLogin, onRegister,onMatches,onHowItWorks }) {
   return (
     <div className="home-page">
 
@@ -91,9 +91,12 @@ function Home({ onLogin, onRegister,onMatches }) {
 >
   Explore Matches
 </button>
-              <button className="how-btn">
-                How It Works
-              </button>
+              <button
+  className="how-btn"
+  onClick={onHowItWorks}
+>
+  How It Works
+</button>
 
             </div>
 

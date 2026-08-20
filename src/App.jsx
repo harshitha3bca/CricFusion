@@ -4,10 +4,12 @@ import Home from "./Home.jsx";
 import Login from "./Login.jsx";
 import Register from "./Register.jsx";
 import Matches from "./Matches.jsx";
+import HowItWorks from "./HowItWorks.jsx";
 
 function App() {
-
   const [page, setPage] = useState("home");
+
+  // ================= LOGIN =================
 
   if (page === "login") {
     return (
@@ -16,6 +18,8 @@ function App() {
       />
     );
   }
+
+  // ================= REGISTER =================
 
   if (page === "register") {
     return (
@@ -26,6 +30,8 @@ function App() {
     );
   }
 
+  // ================= MATCHES =================
+
   if (page === "matches") {
     return (
       <Matches
@@ -34,11 +40,24 @@ function App() {
     );
   }
 
+  // ================= HOW IT WORKS =================
+
+  if (page === "how") {
+    return (
+      <HowItWorks
+        onBackToHome={() => setPage("home")}
+      />
+    );
+  }
+
+  // ================= HOME =================
+
   return (
     <Home
       onLogin={() => setPage("login")}
       onRegister={() => setPage("register")}
       onMatches={() => setPage("matches")}
+      onHowItWorks={() => setPage("how")}
     />
   );
 }
